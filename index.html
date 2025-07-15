@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Resume Form</h1>
+        <form id="resumeForm">
+            <div class="form-section">
+                <label>Full Name *</label>
+                <input type="text" name="fullName" required>
+
+                <label>Email *</label>
+                <input type="email" name="email" required>
+
+                <label>Phone *</label>
+                <input type="tel" name="phone" required>
+
+                <label>Date of Birth *</label>
+                <input type="date" name="dob" required>
+
+                <label>Gender *</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                    <label><input type="radio" name="gender" value="other"> Other</label>
+                </div>
+
+                <label>Address *</label>
+                <textarea name="address" required></textarea>
+            </div>
+
+            <div class="form-section">
+                <label>LinkedIn Profile</label>
+                <input type="url" name="linkedin">
+
+                <label>GitHub Profile</label>
+                <input type="url" name="github">
+            </div>
+
+            <div class="form-section">
+                <label>Upload Resume (PDF) *</label>
+                <input type="file" name="resumeFile" accept=".pdf" required>
+
+                <label>Upload Photo</label>
+                <input type="file" name="profilePhoto" accept="image/*">
+            </div>
+
+            <div class="form-section">
+                <label>Career Objective *</label>
+                <textarea name="careerObjective" required></textarea>
+
+                <label>Qualification *</label>
+                <input type="text" name="qualification" required>
+
+                <label>College/University *</label>
+                <input type="text" name="college" required>
+
+                <label>Year of Graduation *</label>
+                <input type="number" name="graduationYear" required>
+            </div>
+
+            <div class="form-section">
+                <label>Technical Skills *</label>
+                <textarea name="technicalSkills" required></textarea>
+
+                <label>Programming Languages *</label>
+                <textarea name="programmingLanguages" required></textarea>
+
+                <label>Certifications</label>
+                <textarea name="certifications"></textarea>
+            </div>
+
+            <div class="form-section">
+                <label>Work Experience (years) *</label>
+                <input type="number" name="workExperience" required>
+
+                <label>Last Company</label>
+                <input type="text" name="lastCompany">
+
+                <label>Job Role</label>
+                <input type="text" name="jobRole">
+            </div>
+
+            <div class="form-section">
+                <label>Languages Known *</label>
+                <textarea name="languages" required></textarea>
+
+                <label>Hobbies</label>
+                <textarea name="hobbies"></textarea>
+            </div>
+
+            <div class="form-section checkbox-group">
+                <input type="checkbox" name="declaration" required>
+                <label>I confirm all information is true. *</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('resumeForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Form submitted successfully! (This is a demo)');
+        });
+    </script>
+</body>
+
+</html>
